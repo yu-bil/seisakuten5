@@ -93,8 +93,9 @@ function clock() {
   background-color:#CCCCCC;
   border:solid #999999  1px;
   color:#000000;
-  width:300px;
-  padding:10px;
+  width:sw;
+  height:sh:
+/*   padding:10px; */
 }
 
 #date {     /* ID属性で・・・以下同文 */
@@ -111,18 +112,6 @@ function clock() {
     <p>世界時計</p>
     <hr>
     <div id="clock">
-      <select id="city"> <!-- <option>タグは</option>タグで閉じなければいけないペアになってます。追記しました。 -->
-        <option value="-10">Honolulu (USA)</option>
-        <option value="-8">Los Angels (USA)</option>
-        <option value="-5">New York (USA)</option>
-        <option value="-3">Rio de Janeiro (BRA)</option>
-        <option value="0">London (U.K.)</option>
-        <option value="2">Cairo (EGYPT)</option>
-        <option value="5.5">New Delhi (INDIA)</option>
-        <option value="7">Bangkok (THAILAND)</option>
-        <option value="9" selected>Tokyo(JAPAN)</option> <!-- selectedが>の外に出てました中に書いて>で閉じる。また、この行と下の行が<option>ではなく<Option>になっていたので修整 -->
-        <option  value="10">Sydney (AUSTRALIA)</option>
-      </select>
       <span id="timezone"></span>
       <img src="worldmap.jpg">
       <div id="date">----/--/-- ---</div>
