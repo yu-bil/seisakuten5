@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Simple clock</title>
     <style>
+        /* Google Fonts 読み込み */
+    @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
     /*
         このCSSの部分をOBSのブラウザソースのカスタムCSSに設定することで
         ファイルを変更せずにOBS側でカスタマイズできます.
@@ -33,6 +36,9 @@
     /* 時間と分 */
     #hhmmss1 {
         font-size:100%; /* #timeのサイズに対するサイズ割合 */
+        color: #daf6ff;
+        text-shadow: 0 0 20px #0aafe6;
+        line-height: 1.2;
         position:absolute;       /* 絶対位置指定を宣言 */
         left:200px;               /* 左から80pxの位置に表示 */
         top:80px;
