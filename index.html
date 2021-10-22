@@ -47,6 +47,10 @@
         /* 時間と分 */
     #hhmmss2 {
         font-size:100%; /* #timeのサイズに対するサイズ割合 */
+        font-family: 'Share Tech Mono', monospace;
+        color: #daf6ff;
+        text-shadow: 0 0 20px #0aafe6;
+        line-height: 1.2;
         position:absolute;       /* 絶対位置指定を宣言 */
         left:200px;               /* 左から80pxの位置に表示 */
         top:160px;
@@ -54,6 +58,10 @@
         /* 時間と分 */
     #hhmmss3 {
         font-size:100%; /* #timeのサイズに対するサイズ割合 */
+        font-family: 'Share Tech Mono', monospace;
+        color: #daf6ff;
+        text-shadow: 0 0 20px #0aafe6;
+        line-height: 1.2;
         position:absolute;       /* 絶対位置指定を宣言 */
         left:200px;               /* 左から80pxの位置に表示 */
         top:240px;
@@ -61,6 +69,10 @@
         /* 時間と分 */
     #hhmmss4 {
         font-size:100%; /* #timeのサイズに対するサイズ割合 */
+        font-family: 'Share Tech Mono', monospace;
+        color: #daf6ff;
+        text-shadow: 0 0 20px #0aafe6;
+        line-height: 1.2;
         position:absolute;       /* 絶対位置指定を宣言 */
         left:200px;               /* 左から80pxの位置に表示 */
         top:320px;
@@ -71,17 +83,17 @@
     #ss {
         font-size:100%; /*  #timeのサイズに対するサイズ割合  */
         position:absolute;       /* 絶対位置指定を宣言 */
-        left:80px;               /* 左から80pxの位置に表示 */
+        left:80px;               /* 左から80pxの位置に表示 <span id="YYYYMMDD"></span>*/
         top:100px;
     }
     </style>
 </head>
 <body>
     <div id="time">
-        <span id="YYYYMMDD"></span><span id="hhmmss1"></span>
-        <span id="YYYYMMDD"><span id="hhmmss2"></span>
-        <span id="YYYYMMDD"><span id="hhmmss3"></span>
-        <span id="YYYYMMDD"><span id="hhmmss4"></span>
+        <span id="hhmmss1"></span>
+        <span id="hhmmss2"></span>
+        <span id="hhmmss3"></span>
+        <span id="hhmmss4"></span>
     </div>
     <script>
     time();
@@ -101,11 +113,24 @@
                 + ('0' + date.getDate()).slice(-2) + separatorDate;
         document.getElementById("YYYYMMDD").innerHTML = str;
         
+        /*人*/
         str = ('0' + date.getHours()).slice(-2) + ":"
                 + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2);
         document.getElementById("hhmmss1").innerHTML = str;
+        
+        /*ネズミ*/
+        str = ('0' + date.getHours()).slice(-2) + ":"
+                + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2);
         document.getElementById("hhmmss2").innerHTML = str;
+        
+        /*象*/
+        str = ('0' + date.getHours()).slice(-2) + ":"
+                + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2);
         document.getElementById("hhmmss3").innerHTML = str;
+        
+        /*ネコ*/
+        str = ('0' + date.getHours()).slice(-2) + ":"
+                + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2);
         document.getElementById("hhmmss4").innerHTML = str;
         
         str = ":" + ('0' + date.getSeconds()).slice(-2);
