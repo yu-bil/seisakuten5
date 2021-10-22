@@ -31,12 +31,34 @@
     }
     
     /* 時間と分 */
-    #hhmmss {
+    #hhmmss1 {
         font-size:100%; /* #timeのサイズに対するサイズ割合 */
         position:absolute;       /* 絶対位置指定を宣言 */
         left:80px;               /* 左から80pxの位置に表示 */
-        top:100px;
+        top:250px;
     }
+        /* 時間と分 */
+    #hhmmss2 {
+        font-size:100%; /* #timeのサイズに対するサイズ割合 */
+        position:absolute;       /* 絶対位置指定を宣言 */
+        left:160px;               /* 左から80pxの位置に表示 */
+        top:250px;
+    }
+        /* 時間と分 */
+    #hhmmss3 {
+        font-size:100%; /* #timeのサイズに対するサイズ割合 */
+        position:absolute;       /* 絶対位置指定を宣言 */
+        left:240px;               /* 左から80pxの位置に表示 */
+        top:250px;
+    }
+        /* 時間と分 */
+    #hhmmss4 {
+        font-size:100%; /* #timeのサイズに対するサイズ割合 */
+        position:absolute;       /* 絶対位置指定を宣言 */
+        left:320px;               /* 左から80pxの位置に表示 */
+        top:250px;
+    }
+  
 
     /* 秒 */
     #ss {
@@ -49,7 +71,10 @@
 </head>
 <body>
     <div id="time">
-        <span id="YYYYMMDD"></span> <span id="hhmmss"></span>
+        <span id="hhmmss1"></span>
+        <span id="hhmmss2"></span>
+        <span id="hhmmss3"></span>
+        <span id="hhmmss4"></span>
     </div>
     <script>
     time();
@@ -71,7 +96,10 @@
         
         str = ('0' + date.getHours()).slice(-2) + ":"
                 + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2);
-        document.getElementById("hhmmss").innerHTML = str;
+        document.getElementById("hhmmss1").innerHTML = str;
+        document.getElementById("hhmmss2").innerHTML = str;
+        document.getElementById("hhmmss3").innerHTML = str;
+        document.getElementById("hhmmss4").innerHTML = str;
         
         str = ":" + ('0' + date.getSeconds()).slice(-2);
 //         document.getElementById("ss").innerHTML = str;
