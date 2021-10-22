@@ -32,7 +32,8 @@ function clock() {
   var timeUTC= timeTokyo - 9*60*60*1000;
 
   //選択された都市のタイムゾーン
-  var cityElement = document.getElementById("city");
+  var cityElement = document.getElementById(9);
+//   var cityElement = document.getElementById("city");
   var index = cityElement.selectedIndex;
   var timeZone = cityElement.options[index].value;
 
