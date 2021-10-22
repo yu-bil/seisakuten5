@@ -1,33 +1,37 @@
-
- function clock()
-{
-  // 数字が 1ケタのとき、「0」を加えて 2ケタにする
-  var twoDigit =function(num){
-    　     var digit
-         if( num < 10 )
-          { digit = "0" + num; }
-         else { digit = num; }
-         return digit;
-   }
-  // 曜日を表す各文字列の配列
-  var weeks = new Array("Sun","Mon","Thu","Wed","Thr","Fri","Sat");
-
- // 現在日時を表すインスタンスを取得
-  var now = new Date();
-
-    var year = now.getFullYear();
-    var month = twoDigit(now.getMonth() + 1)
-    var day = twoDigit(now.getDate());
-    var week = weeks[now.getDay()];
-    var hour = twoDigit(now.getHours());
-    var minute = twoDigit(now.getMinutes());
-    var second = twoDigit(now.getSeconds());
- //　HTML: <div id="clock_date">(ココの日付文字列を書き換え)</div>
-document.getElementById("clock_date").textContent =  year + "/" + month + "/" + day + " (" + week + ")";
-
-//　HTML: <div id="clock_time">(ココの時刻文字列を書き換え)</div>
-document.getElementById("clock_time").textContent = hour + ":" + minute + ":" + second;
-
-}
-// 上記のclock関数を1000ミリ秒ごと(毎秒)に実行
-setInterval(clock, 1000);
+(()=>{
+            // ゼロ埋めして2桁の数値にする
+            const zero = n => (n < 10 ) ? "0" + n.toString() : n.toString();
+ 
+            // 日付の文字列化
+            const youbi = ["日","月","火","水","木","金","土"];
+            const getDateString = date =>
+                `${ date.getFullYear() }年 ${ zero(date.getMonth() + 1) }月  ${ zero(date.getDate()) }日 ${ youbi[date.getDay()] }曜日`;
+ 
+            // 時間の文字列化
+            const getHourString = date =>
+                `${ zero(date.getHours()) }: ${ zero(date.getMinutes()) }: ${ zero(date.getSeconds()) }`;
+ 
+            // DOMの構築を待つ
+            window.addEventListener('DOMContentLoaded',()=> {
+                // 日時を表示するDOM要素を取得
+                const dateDiv = document.getElementById("date");
+                const clockDiv = document.getElementById("clock");
+ 
+                // 現在の日
+                let nowDate = null;
+ 
+                // 1秒周期のタイマーセット
+                setInterval( ()=>{
+                    // 現在の日時を取得
+                    const now = new Date();
+                    // 日付が変わったら日付を再表示
+                    if( nowDate !== now.getDate() ) {
+                        nowDate = now.getDate();
+                        dateDiv.innerText = getDateString(now);
+                    }
+ 
+                    // 時間を再表示
+                    clockDiv.innerText = getHourString(now);
+                },1000);
+            });
+})();
