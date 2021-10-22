@@ -16,9 +16,7 @@
         font-size:80px; /* サイズ */
         font-family: "M+ 1p black", sans-serif; /* フォント指定 */
         color:#000000; /* 色 */
-        position:absolute;       /* 絶対位置指定を宣言 */
-        left:80px;               /* 左から80pxの位置に表示 */
-        top:100px;
+        
         
         /* アウトライン 標準はOFF、必要な場合はコメントアウトを外す */
         /*
@@ -35,11 +33,17 @@
     /* 時間と分 */
     #hhmm {
         font-size:100%; /* #timeのサイズに対するサイズ割合 */
+        position:absolute;       /* 絶対位置指定を宣言 */
+        left:80px;               /* 左から80pxの位置に表示 */
+        top:100px;
     }
 
     /* 秒 */
     #ss {
-        font-size:60%; /*  #timeのサイズに対するサイズ割合  */
+        font-size:100%; /*  #timeのサイズに対するサイズ割合  */
+        position:absolute;       /* 絶対位置指定を宣言 */
+        left:80px;               /* 左から80pxの位置に表示 */
+        top:100px;
     }
     </style>
 </head>
