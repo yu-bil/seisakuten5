@@ -122,14 +122,15 @@
             img[i] = new Image();
             img[i].src = array[i];
         }
-        cv = document.getElementById("clock");
-        cv.width = sw;
-        cv.height = 3*sh;
-        cv.style.backgroundColor = "green"
-        cvgx = cv.getContext("2d");
-        setInterval(drawClock,30);
-        var back_img = {"width":320, "height":240, "cx":161, "cy":121, "image":img[0]}; //"cx":321, "cy":241
-        cvgx.drawImage(back_img.image,-50,0,back_img.width*factor,back_img.height*factor);
+//         cv = document.getElementById("clock");
+//         cv.width = sw;
+//         cv.height = 3*sh;
+//         cv.style.backgroundColor = "green"
+//         cvgx = cv.getContext("2d");
+//         setInterval(drawClock,30);
+//         var back_img = {"width":320, "height":240, "cx":161, "cy":121, "image":img[0]}; //"cx":321, "cy":241
+//         cvgx.drawImage(back_img.image, -50,0, back_img.width*factor,back_img.height*factor);
+        
         /* 年月日の区切り指定 */
         /*
           何も表示したくない場合は""のみにする.
