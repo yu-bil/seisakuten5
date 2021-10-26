@@ -119,17 +119,17 @@
         document.getElementById("hhmmss1").innerHTML = str;
         
         /*ネズミ*/
-        var para2 = 10
-        var hour2 = date.getHours()
-        var minit2 = date.getMinutes()
-        var sec2 = para2 * date.getSeconds()
+        var para2 = 10;
+        var hour2 = date.getHours();
+        var minit2 = date.getMinutes();
+        var sec2 = para2 * date.getSeconds();
         if (sec2 > 59){
-            sec2 = sec2 - 60
-            minit2 = minit2 + 1
+            sec2 = sec2 - 60;
+            minit2 = minit2 + 1;
             
             if (minit2 > 60) {
-                minit2 = minit2 - 60
-                hour2 = hour2 + 1
+                minit2 = minit2 - 60;
+                hour2 = hour2 + 1;
             }
         }
         str = ('0' + hour2).slice(-2) + ":"
