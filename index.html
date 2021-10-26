@@ -132,7 +132,7 @@
             minit2 = minit2 - 60;
         }
         str = ('0' + hour2).slice(-2) + ":"
-                + ('0' + minit2).slice(-2)+ ":" + ('0' + sec2).slice(-2);
+                + ('0' + minit2).slice(-2)+ ":" + ('0' + sec2).slice(0,2);
         document.getElementById("hhmmss2").innerHTML = str;
         
         
@@ -151,7 +151,7 @@
             minit3 = minit3 - 60;
         }
         str = ('0' + hour3).slice(-2) + ":"
-                + ('0' + minit3).slice(-2)+ ":" + ('0' + sec3).slice(-2);
+                + ('0' + minit3).slice(-2)+ ":" + ('0' + sec3).slice(0,2);
         document.getElementById("hhmmss3").innerHTML = str;
         
         
@@ -169,7 +169,7 @@
             minit4 = minit4 - 60;
         }
         str = ('0' + hour4).slice(-2) + ":"
-                + ('0' + minit4).slice(-2)+ ":" + ('0' + sec4).slice(-2);
+                + ('0' + minit4).slice(-2)+ ":" + ('0' + sec4).slice(0,2);
         document.getElementById("hhmmss4").innerHTML = str;
         
         str = ":" + ('0' + date.getSeconds()).slice(-2);
