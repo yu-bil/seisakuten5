@@ -124,8 +124,8 @@
         var minit2 = date.getMinutes();
         var sec2 = para2 * date.getSeconds();
         if (sec2 > 59){
-            sec2 = sec2 - 60;
             minit2 = minit2 + 1;
+            sec2 = sec2 - 60;
             
 //             if (minit2 > 60) {
 //                 minit2 = minit2 - 60;
@@ -133,8 +133,8 @@
 //             }
         }
         if (minit2 > 60){
-            minit2 = minit2 - 60;
             hour2 = hour2 + 1;
+            minit2 = minit2 - 60;
         }
         str = ('0' + hour2).slice(-2) + ":"
                 + ('0' + minit2).slice(-2)+ ":" + ('0' + sec2).slice(-2);
