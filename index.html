@@ -115,9 +115,12 @@
         
         /*人*/
         str = ('0' + date.getHours()).slice(-2) + ":"
-                + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2) + ":" + ('0' + date.getTime()).slice(-2);
+                + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2);
         document.getElementById("hhmmss1").innerHTML = str;
         
+//         str = ('0' + date.getHours()).slice(-2) + ":"
+//                 + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2) + ":" + ('0' + date.getTime()).slice(-2);
+//         document.getElementById("hhmmss1").innerHTML = str;
         /*ネズミ*/
         var para2 = 0.1;
         var hour2 = date.getHours();
