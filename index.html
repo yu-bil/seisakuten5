@@ -15,6 +15,20 @@
         background-color:#00000000; /* 背景色 RGBA 標準は透過*/
         
     }
+        /* 背景画像の追加 */
+    .disp-img{
+        background-image:url(./back.jpg);             /* 画像のURLを指定       */
+        margin:0;
+        padding:0;
+
+/*     background-size:contain;               /* 画像の繰り返しを指定  */               */
+        width: 400px;                                   /* 横幅のサイズを指定    */
+        height:600px;                                 /* 縦幅のサイズを指定    */
+        background-size: cover;
+        position:relative;
+        top: 0px;
+        right: 20px;
+    }
     /* 文字装飾 */
     #time {
         font-size:80px; /* サイズ */
@@ -101,12 +115,14 @@
     </style>
 </head>
 <body>
-    <div id="time">
-        <span id="YYYYMMDD"></span><span id="hhmmss1"></span>
-        <span id="YYYYMMDD"></span><span id="hhmmss2"></span>
-        <span id="YYYYMMDD"></span><span id="hhmmss3"></span>
-        <span id="YYYYMMDD"></span><span id="hhmmss4"></span>
-        <span id="YYYYMMDD"></span><span id="hhmmss5"></span>
+    <div class="disp-img">
+        <div id="time">
+            <span id="YYYYMMDD"></span><span id="hhmmss1"></span>
+            <span id="YYYYMMDD"></span><span id="hhmmss2"></span>
+            <span id="YYYYMMDD"></span><span id="hhmmss3"></span>
+            <span id="YYYYMMDD"></span><span id="hhmmss4"></span>
+            <span id="YYYYMMDD"></span><span id="hhmmss5"></span>
+        </div>
     </div>
     <script>
     time();
