@@ -119,7 +119,7 @@
         document.getElementById("hhmmss1").innerHTML = str;
         
         /*ネズミ*/
-        var para2 = 10;
+        var para2 = 0.1;
         var hour2 = date.getHours();
         var minit2 = date.getMinutes();
         var sec2 = para2 * date.getSeconds();
@@ -138,13 +138,38 @@
         
         
         /*象*/
-        str = ('0' + date.getHours()).slice(-2) + ":"
-                + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2);
+        var para3 = 3.5;
+        var hour3 = date.getHours();
+        var minit3 = date.getMinutes();
+        var sec3 = para3 * date.getSeconds();
+        while (sec2 > 59) {
+            minit3 = minit3 + 1;
+            sec3 = sec3 - 60;
+        }
+        while (minit3 > 60){
+            hour3 = hour3 + 1;
+            minit3 = minit3 - 60;
+        }
+        str = ('0' + hour3).slice(-2) + ":"
+                + ('0' + minit3).slice(-2)+ ":" + ('0' + sec3).slice(-2);
         document.getElementById("hhmmss3").innerHTML = str;
         
+        
         /*ネコ*/
-        str = ('0' + date.getHours()).slice(-2) + ":"
-                + ('0' + date.getMinutes()).slice(-2)+ ":" + ('0' + date.getSeconds()).slice(-2);
+        var para4 = 0.5;
+        var hour4 = date.getHours();
+        var minit4 = date.getMinutes();
+        var sec4 = para4 * date.getSeconds();
+        while (sec2 > 59) {
+            minit4 = minit4 + 1;
+            sec4 = sec4 - 60;
+        }
+        while (minit4 > 60){
+            hour4 = hour4 + 1;
+            minit4 = minit4 - 60;
+        }
+        str = ('0' + hour4).slice(-2) + ":"
+                + ('0' + minit4).slice(-2)+ ":" + ('0' + sec4).slice(-2);
         document.getElementById("hhmmss4").innerHTML = str;
         
         str = ":" + ('0' + date.getSeconds()).slice(-2);
