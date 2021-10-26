@@ -16,7 +16,7 @@
         
     }
         /* 背景画像の追加 */
-    .disp-img{
+    #disp-img{
         background-image:url(./back.jpg);             /* 画像のURLを指定       */
         margin:0;
         padding:0;
@@ -115,14 +115,13 @@
     </style>
 </head>
 <body>
-    <div class="disp-img">
-        <div id="time">
-            <span id="YYYYMMDD"></span><span id="hhmmss1"></span>
-            <span id="YYYYMMDD"></span><span id="hhmmss2"></span>
-            <span id="YYYYMMDD"></span><span id="hhmmss3"></span>
-            <span id="YYYYMMDD"></span><span id="hhmmss4"></span>
-            <span id="YYYYMMDD"></span><span id="hhmmss5"></span>
-        </div>
+    <div id="time">
+        <span id="disp-img"></span>
+        <span id="YYYYMMDD"></span><span id="hhmmss1"></span>
+        <span id="YYYYMMDD"></span><span id="hhmmss2"></span>
+        <span id="YYYYMMDD"></span><span id="hhmmss3"></span>
+        <span id="YYYYMMDD"></span><span id="hhmmss4"></span>
+        <span id="YYYYMMDD"></span><span id="hhmmss5"></span>
     </div>
     <script>
     time();
