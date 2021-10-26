@@ -100,7 +100,7 @@
     }
     </style>
 </head>
-<body onload="init();">
+<body>
     <div id="time">
         <span id="YYYYMMDD"></span><span id="hhmmss1"></span>
         <span id="YYYYMMDD"></span><span id="hhmmss2"></span>
@@ -109,45 +109,8 @@
         <span id="YYYYMMDD"></span><span id="hhmmss5"></span>
     </div>
     <script>
-        var sw = window.innerWidth; // 表示画面サイズ　640 
-        var sh = window.innerHeight; //480
-        var basewidth = 640, baseheight = 480; // 基本画像（文字盤）サイズ
-        // 背景文字盤、時針、分針、秒針
-        var array = ["./back.jpg"];
-        var img = [];
-        for (i=0;i<array.length;i++) {
-            img[i] = new Image();
-            img[i].src = array[i];
-        }
-    function init() {
-        cv = document.getElementById("clock");
-        cv.width = sw;
-        cv.height = 3*sh;
-        cv.style.backgroundColor = "green"
-        cvgx = cv.getContext("2d");
-        setInterval(drawClock,30);
-    }
     time();
     function time(){
-        
-//         var sw = window.innerWidth; // 表示画面サイズ　640
-//         var sh = window.innerHeight; //480
-//         var basewidth = 640, baseheight = 480; // 基本画像（文字盤）サイズ
-//         // 背景文字盤、時針、分針、秒針
-//         var array = ["./back.jpg"];
-//         var img = [];
-//         for (i=0;i<array.length;i++) {
-//             img[i] = new Image();
-//             img[i].src = array[i];
-//         }
-//         cv = document.getElementById("clock");
-//         cv.width = sw;
-//         cv.height = 3*sh;
-//         cv.style.backgroundColor = "green"
-//         cvgx = cv.getContext("2d");
-//         setInterval(drawClock,30);
-         var back_img = {"width":320, "height":240, "cx":161, "cy":121, "image":img[0]}; //"cx":321, "cy":241
-         cvgx.drawImage(back_img.image, -50,0, back_img.width*factor,back_img.height*factor);
         
         /* 年月日の区切り指定 */
         /*
